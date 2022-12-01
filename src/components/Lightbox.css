@@ -1,0 +1,55 @@
+.lightbox {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 3, 3, 0.516);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.main-img {
+  height: 50vh;
+  width: 50vh;
+  border-radius: 1em;
+}
+.container-left-images-lightbox {
+  display: flex;
+  flex-direction: row;
+  width: 24em;
+  gap: 1em;
+}
+
+.left {
+  position: relative;
+  top: 34vh;
+  left: -11em;
+  background-color: var(--White);
+  border-radius: 50%;
+}
+.right {
+  position: relative;
+  top: 28vh;
+  left: 11em;
+  width: 2em;
+  background-color: transparent;
+  background-color: var(--White);
+  border-radius: 50%;
+}
+.left:hover,
+.right:hover {
+  background-color: var(--Orange);
+}
+
+@media screen and (width < 575px) {
+  .lightbox {
+    display: none;
+  }
+}

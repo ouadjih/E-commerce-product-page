@@ -1,0 +1,218 @@
+.container {
+  padding: 3em 4em;
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+}
+.container-left {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.container-left-image {
+  max-width: 50em;
+  min-width: 10em;
+  max-height: 30em;
+  border-radius: 1em;
+  cursor: pointer;
+}
+.container-left-images {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+}
+
+.thumb-image {
+  width: 100%;
+  border-radius: 1em;
+}
+
+.container-right {
+  width: 50%;
+  padding: 4em 2em;
+}
+.title {
+  color: var(--Orange);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2em;
+}
+.subtitle {
+  color: var(--Black);
+  font-weight: 700;
+  font-size: 38px;
+  margin-bottom: 1em;
+}
+.description {
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 2em;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  margin-bottom: 4em;
+}
+.price-top {
+  display: flex;
+  gap: 1em;
+  font-weight: 700;
+}
+.new-price {
+  font-size: 25px;
+}
+.discount {
+  position: relative;
+  top: 0.1em;
+  color: var(--Orange);
+  background-color: var(--Pale-orange);
+  padding: 0.2em 0.4em;
+  border-radius: 1em;
+}
+.old-price {
+  text-decoration: line-through;
+  color: var(--Grayish-blue);
+  font-size: 13px;
+}
+.container-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 4em;
+  width: 100%;
+  align-items: center;
+}
+
+.btn-quantity {
+  display: flex;
+  flex-direction: row;
+}
+.btn {
+  padding: 0.5em 0.7em;
+  background-color: var(--Light-grayish-blue);
+  border: none;
+  cursor: pointer;
+  color: orange;
+  font-weight: 700;
+  font-size: 20px;
+}
+.left {
+  border-radius: 0.5em 0em 0em 0.5em;
+}
+.right {
+  border-radius: 0em 0.5em 0.5em 0em;
+}
+.quantity {
+  background-color: var(--Light-grayish-blue);
+  width: 5em;
+  text-align: center;
+  line-height: 3em;
+  font-weight: 700;
+}
+.btn-addtocard {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  border: none;
+  background-color: var(--Orange);
+  color: var(--White);
+  font-weight: 600;
+  font-size: 10px;
+  width: 13em;
+  height: 5em;
+  text-align: center;
+  padding: 1.6em;
+  border-radius: 0.3em;
+}
+.cardImage {
+  width: 1em;
+  height: 1em;
+}
+.btn-close {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: var(--Orange);
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  cursor: pointer;
+  z-index: 5;
+}
+.renderlightbox {
+  display: flex;
+  align-items: center;
+}
+.arrow-left,
+.arrow-right {
+  display: none;
+}
+.container-left-image-mobile {
+  display: none;
+}
+@media screen and (width < 575px) {
+  .container {
+    flex-direction: column;
+    padding: 0em 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-left {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    border-radius: 0;
+  }
+  .container-left-image {
+    display: none;
+  }
+  .arrow-left,
+  .arrow-right {
+    display: block;
+    cursor: pointer;
+    z-index: 0;
+    background-color: var(--White);
+    padding: 0.5em;
+    border-radius: 50%;
+  }
+  .arrow-left {
+    position: absolute;
+    top: 30vh;
+    right: 2em;
+  }
+  .arrow-right {
+    position: absolute;
+    top: 30vh;
+    left: 2em;
+  }
+  .container-left-images {
+    max-width: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+  }
+  .container-left-image-mobile {
+    display: flex;
+    max-width: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+  }
+  .btn-close {
+    display: none;
+  }
+  .container-right {
+    padding: 1em 1em;
+    width: 100%;
+  }
+  .price {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 1em;
+  }
+  .container-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+}

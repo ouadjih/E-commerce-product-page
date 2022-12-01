@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        padding: 2em;
+        background-color: hsl(26, 100%, 55%);
+      }
+      .attribution a {
+        color: hsl(0, 0%, 0%);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .attribution a:hover {
+        color: rgb(23, 32, 29);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <h1 class="logo">sneakers</h1>
+        <ul class="links">
+          <li class="link">Collections</li>
+          <li class="link">Men</li>
+          <li class="link">Women</li>
+          <li class="link">About</li>
+          <li class="link">Contact</li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <img
+          src="./asset/images/icon-cart.svg"
+          alt="icon-payement"
+          class="icon"
+        />
+        <img
+          src="./asset/images/image-avatar.png"
+          alt="profile"
+          class="profile"
+          onclick="toggleCart()"
+        />
+      </div>
+      <div id="cart" class="cart">
+        <h2 class="cart-title">cart</h2>
+        <div class="cart-product">
+          <img
+            class="item-image"
+            src="./asset/images/image-product-1-thumbnail.jpg"
+            alt="product-img"
+          />
+          <div class="product-info">
+          <div class="product-title">Fall Limited Edition Sneakers</div>
+          <div class="pricing">
+            <div class="product-price">$125.00</div>
+            <div class="product-q">x  3</div>
+            <div class="product-total-price">$375.00</div>
+          </div>
+          </div>
+          <img
+            class="delete-product"
+            src="./asset/images/icon-delete.svg"
+            alt="delete"
+          />
+        </div>
+        <div class="btn-checkout">Checkout</div>
+      </div>
+    </nav>
+    <main class="container">
+      <div class="container-left">
+        <img
+          class="container-left-image"
+          src="./asset/images/image-product-1.jpg"
+          alt="main Image"
+        />
+        <div class="container-left-images">
+          <img
+            class="thumb-image"
+            src="./asset/images/image-product-1-thumbnail.jpg"
+            alt="img1"
+          />
+          <img
+            class="thumb-image"
+            src="./asset/images/image-product-1-thumbnail.jpg"
+            alt="img1"
+          />
+          <img
+            class="thumb-image"
+            src="./asset/images/image-product-1-thumbnail.jpg"
+            alt="img1"
+          />
+          <img
+            class="thumb-image"
+            src="./asset/images/image-product-1-thumbnail.jpg"
+            alt="img1"
+          />
+        </div>
+      </div>
+      <div class="container-right">
+        <h3 class="title">Sneaker Company</h3>
+        <h1 class="subtitle">Fall Limited Edition Sneakers</h1>
+        <p class="description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price">
+          <div class="price-top">
+            <div class="new-price">$125.00</div>
+            <div class="discount">50%</div>
+          </div>
+          <div class="old-price">$250.00</div>
+        </div>
+        <div class="container-buttons">
+          <div class="btn-quantity">
+            <button class="btn left">-</button>
+            <p class="quantity">0</p>
+            <button class="btn right">+</button>
+          </div>
+          <button class="btn-addtocard">
+            <img src="./asset/images/icon-cart.svg" alt="card" /> Add to cart
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="github/ouadjih">Mohamed Ouadjih Boudraa</a>.
+      </div>
+    </footer>
+    <script>
+      let cart = document.getElementById("cart");
+      function toggleCart(){
+        cart.style.display === "none"?
+        cart.style.display = "block":
+        cart.style.display = "none"
+      }
+    </script>
+  </body>
+</html>
